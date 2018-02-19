@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Roloop">
 <meta property="og:description" content="之所以选择hexo进行建站，供参考，大致原因如下：  撰写一些公开文章，不涉及隐私相关内容； 使用markdown进行编写，注重文章内容； 利用自己域名，不想依托其他内容平台。  简介基础教程可以google其他文章，教程大多已经比较详尽，此文章主要概要说一下踩到的几个坑。如有时间也会将基础教程也补充，先留坑。 环境环境基础搭建，google比较多。  MAC电脑，可能与WIN电脑设置有所不同 G">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-19T05:33:25.000Z">
+<meta property="og:updated_time" content="2018-02-19T05:36:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo配置：ftpsync及git">
 <meta name="twitter:description" content="之所以选择hexo进行建站，供参考，大致原因如下：  撰写一些公开文章，不涉及隐私相关内容； 使用markdown进行编写，注重文章内容； 利用自己域名，不想依托其他内容平台。  简介基础教程可以google其他文章，教程大多已经比较详尽，此文章主要概要说一下踩到的几个坑。如有时间也会将基础教程也补充，先留坑。 环境环境基础搭建，google比较多。  MAC电脑，可能与WIN电脑设置有所不同 G">
@@ -334,7 +334,7 @@
 <p>使用git进行推送，网址为username.github.io。</p>
 <p>建站方便，但由于国内访问速度慢，所以使用github进行版本管理。</p>
 <p>_config.yml配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type: git</span><br><span class="line">repo: git@github.com:username/pitaph.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">type: git</span><br><span class="line">repo: git@github.com:username/username.github.io.git</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure>
 <h2 id="第二活：阿里云虚拟主机"><a href="#第二活：阿里云虚拟主机" class="headerlink" title="第二活：阿里云虚拟主机"></a>第二活：阿里云虚拟主机</h2><p>开启ftpsync的verbose模式看到，原来这货是先取出远端的目录文件,再与本地的目录文件对比,然后将差异计算出来,最后执行相关的同步。</p>
 <h2 id="注意项"><a href="#注意项" class="headerlink" title="注意项"></a>注意项</h2><p>ftpsync是把ftp的服务端目录和文件调整成本地一模一样,也就是原来服务器上的文件如果本地没有话是会被<strong>删除</strong>掉的。(这里体现了双活的必要)</p>
 <p>注意ignore相关语法，阿里云主机中<code>logreport</code>无权限删除</p>
